@@ -1,0 +1,118 @@
+<h1>H1</h1>
+<h2>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+<h6>H6</h6>
+<p>Alternatively, for H1 and H2, an underline-ish style:</p>
+<h1>Alt-H1</h1>
+<h2>Alt-H2</h2>
+<pre><code># H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+</code></pre>
+<p>A paragraph is simply one or more consecutive lines of text, separated by one or more blank lines.</p>
+<p>My work explores the relationship between Critical theory and <a href="https://en.wikipedia.org/wiki/List_of_reported_UFO_sightings">UFO sightings</a>. With influences as diverse as Kafka and Joni Mitchell, new variations are distilled from both traditional and modern meanings.</p>
+<blockquote>
+<p>Ever since I was a teenager I have been fascinated by the unrelenting divergence of the moment. What starts out as vision soon becomes debased into a tragedy of distress, leaving only a sense of nihilism and the dawn of a new understanding.</p>
+</blockquote>
+<p>As shifting forms become reconfigured through <strong>diligent and diverse practice</strong>, the viewer is left with an epitaph for the <em>darkness of our era</em>.</p>
+<h2>Inline HTML elements</h2>
+<p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
+<ul>
+<li><strong>To bold text</strong>, use <code>&lt;strong&gt;</code>.</li>
+<li><em>To italicize text</em>, use <code>&lt;em&gt;</code>.</li>
+<li><mark>To highlight</mark>, use <code>&lt;mark&gt;</code>.</li>
+<li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code>&lt;abbr&gt;</code>, with an optional <code>title</code> attribute for the full phrase.</li>
+<li>Citations, like <cite>— Mark Otto</cite>, should use <code>&lt;cite&gt;</code>.</li>
+<li><del>Deleted</del> text should use <code>&lt;del&gt;</code> and <ins>inserted</ins> text should use <code>&lt;ins&gt;</code>.</li>
+<li>Superscript <sup>text</sup> uses <code>&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code>&lt;sub&gt;</code>.</li>
+</ul>
+<p>Most of these elements are styled by browsers with few modifications on our part.</p>
+<h2>Footnotes</h2>
+<p>Footnotes are supported as part of the Markdown syntax. Here's one in action. Clicking this number[^fn-sample_footnote] will lead you to a footnote. The syntax looks like:</p>
+<pre><code>Clicking this number[^fn-sample_footnote]
+</code></pre>
+<p>Each footnote needs the <code>^fn-</code> prefix and a unique ID to be referenced for the footnoted content. The syntax for that list looks something like this:</p>
+<pre><code>[^fn-sample_footnote]: Handy! Now click the return link to go back.
+</code></pre>
+<p>You can place the footnoted content wherever you like. Markdown parsers should properly place it at the bottom of the post.</p>
+<h3>Code</h3>
+<p>Inline code is available with the <code>&lt;code&gt;</code> element. Snippets of multiple lines of code are supported through Rouge. Longer lines will automatically scroll horizontally when needed. You may also use code fencing (triple backticks) for rendering code.</p>
+<pre><code class="language-js">// Example can be run directly in your JavaScript console
+
+// Create a function that takes two arguments and returns the sum of those arguments
+var adder = new Function(&quot;a&quot;, &quot;b&quot;, &quot;return a + b&quot;);
+
+// Call the function
+adder(2, 6);
+// &gt; 8
+</code></pre>
+<p>You may also optionally show code snippets with line numbers. Add <code>linenos</code> to the Rouge tags.</p>
+<p>{{&lt; highlight js &quot;linenos=inline&quot; &gt;}}
+// Example can be run directly in your JavaScript console</p>
+<p>// Create a function that takes two arguments and returns the sum of those arguments
+var adder = new Function(&quot;a&quot;, &quot;b&quot;, &quot;return a + b&quot;);</p>
+<p>// Call the function
+adder(2, 6);
+// &gt; 8
+{{&lt; / highlight &gt;}}</p>
+<h3>Lists</h3>
+<p>Worldwide, the English rock band the Beatles released</p>
+<ul>
+<li>21 studio albums</li>
+<li>6 live albums</li>
+<li>54 compilation albums</li>
+<li>36 extended play singles</li>
+<li>63 singles</li>
+<li>17 box sets</li>
+<li>22 video albums</li>
+<li>68 music videos</li>
+</ul>
+<p>They began performing live in England in 1961. In 1966, following a controversial tour of Germany, Japan and the Philippines and a tour of the US (which was plagued with backlash due to Lennon's &quot;more popular than Jesus&quot; comment), the Beatles ceased performing live due to being fed up with touring and became a studio-only band.</p>
+<ol>
+<li>Live! at the Star-Club in Hamburg, Germany, 1962</li>
+<li>The Beatles at the Hollywood Bowl, 1977</li>
+<li>First Live Recordings, 1979</li>
+<li>Live at the BBC, 1994</li>
+<li>On Air – Live at the BBC Volume 2, 2013</li>
+<li>Get Back — The Rooftop Performance, 2022</li>
+</ol>
+<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+<dl>
+  <dt>HyperText Markup Language (HTML)</dt>
+  <dd>The language used to describe and define the content of a Web page</dd>
+  <dt>Cascading Style Sheets (CSS)</dt>
+  <dd>Used to describe the appearance of Web content</dd>
+  <dt>JavaScript (JS)</dt>
+  <dd>The programming language used to build advanced Web sites and applications</dd>
+</dl>
+<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+<h3>Images</h3>
+<p><img src="/images/800px-View_from_the_Window_at_Le_Gras_colorized_2020_new.png" alt="View from the Window at Le Gras" title="View from the Window at Le Gras" /></p>
+<p><a href="https://en.wikipedia.org/wiki/en:View_from_the_Window_at_Le_Gras">View from the Window at Le Gras</a>, original plate (left) and colorized reoriented enhancement (right). The photo was found to be taken at <a href="https://en.wikipedia.org/wiki/en:Nic%C3%A9phore_Ni%C3%A9pce">Nicéphore Niépce</a>'s home from a second-story south-facing bedroom window. Original (Niepce) and digitally retouched for educational use (Nguyen).</p>
+<!--
+![placeholder](http://placehold.it/800x400 "Large example image")
+![placeholder](http://placehold.it/400x200 "Medium example image")
+![placeholder](http://placehold.it/200x200 "Small example image")
+-->
+<h3>Tables</h3>
+<p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p>| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |</p>
+<p>Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.</p>
+<p>[^fn-sample_footnote]: Handy! Now click the return link to go back.</p>
