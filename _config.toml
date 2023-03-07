@@ -1,0 +1,8 @@
+title = "Updates"
+baseURL = ""
+tagline = ""
+permalink = "/:year/:month/:title/"
+
+[author]
+  name = 'bijumon'
+  email = 'bj@you.got.mail'
