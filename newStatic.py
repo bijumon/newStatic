@@ -7,12 +7,45 @@ for each content_file
     write html output to render_path
 """
 
-import markdown
+import pprint
+import markdown, toml
 import pathlib, glob
 from jinja2 import Environment, FileSystemLoader
 
+DEFAULTS = {}
+
+class SetDefaults:
+    def __init__(self) -> None:
+        DEFAULTS['source'] = pathlib.Path.cwd()
+        DEFAULTS['destination'] = pathlib.Path.cwd()
+        DEFAULTS['title'] = "newStatic"
+        DEFAULTS['tagline'] = "a python static site generator"
+
+class CommandArguments:
+    pass
+
+class ConfigFileLoader:
+    pass
+
+class SiteConfig:
+    pass
+
+class PageMetadata:
+    pass
+
+class TemplateLoader:
+    def __init__(self) -> None:
+        pass
+
+class HTMLOutput:
+    pass
+
 class newStatic:
-    def __init__(self):
+    def __init__(self) -> None:
+        SiteDefaults = SetDefaults()
+        pprint.pp(DEFAULTS)
+    
+    def testrender(self):
         md_parser = markdown.Markdown(extensions=['meta','fenced_code'])
         template_environment = Environment(loader=FileSystemLoader("layouts/"))
 
