@@ -45,12 +45,19 @@ class CommandArguments:
 class ConfigFileLoader:
     config_from_file = {}
 
+    def exists(self,config_file) -> bool:
+        if Path(config_file).exists():
+            return True
+
     def load(self,config_file):
-        with open(config_file, 'r') as SiteConfigFile:
-           self.config_from_file = toml.loads(config_file.read())
+        cfg = pathlib.Path(config_file)
+        if cfg.exists():
+            with open(cfg, 'r') as SiteConfigFile:
+                self.config_from_file = toml.loads(SiteConfigFile.read())
+        else:
+            raise SystemExit(f"{config_file} does not exist")
         
     def config(self) -> str:
-        pprint.pp(self.config_from_file)
         return self.config_from_file
 
 class Site:
@@ -58,11 +65,13 @@ class Site:
 
     def __init__(self) -> None:
         # load config and merge with defaults
-        file_config = ConfigFileLoader()
-        cmdline = CommandArguments()
-
         self.siteconfig |= DEFAULTS
+        
+        file_config = ConfigFileLoader()
+        file_config.load(self.siteconfig["config"])
         self.siteconfig |= file_config.config()
+
+        cmdline = CommandArguments()
         self.siteconfig |= cmdline.config()
 
     def show_config(self) -> None:
